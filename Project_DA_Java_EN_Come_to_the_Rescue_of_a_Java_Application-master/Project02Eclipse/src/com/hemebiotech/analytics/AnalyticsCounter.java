@@ -11,9 +11,14 @@ public class AnalyticsCounter {
 		new WriteSymptomDataFromFile().pullSymptoms();
 	}
 
+	/**
+	 * Allows you to sort the list that you get from ReadSymptomDataFromFile
+	 *
+	 * @return the list sort
+	 */
     public List<String> count () {
 		ReadSymptomDataFromFile read = new ReadSymptomDataFromFile("symptoms.txt");
-		ArrayList <String> symptoms = new ArrayList<>(read.GetSymptoms()) ;
+		ArrayList <String> symptoms = new ArrayList<>(read.getSymptoms()) ;
 		ArrayList <String> result = new ArrayList<>();
 		symptoms.stream()
 				.collect(Collectors.groupingBy(s -> s))
