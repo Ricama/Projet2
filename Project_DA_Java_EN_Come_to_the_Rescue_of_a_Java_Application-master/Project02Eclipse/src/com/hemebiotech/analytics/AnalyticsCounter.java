@@ -25,7 +25,7 @@ public class AnalyticsCounter {
 			else if (line.equals("rush")) { // research rush and not rash
 				rashCount++;
 			}
-			else if (line.contains("pupils")) {
+			else if (line.contains("pupils")) { // get everything containing pupils
 				pupilCount++;
 			}
 
