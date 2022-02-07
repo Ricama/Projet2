@@ -8,7 +8,7 @@ public class AnalyticsCounter {
 
 
 	public static void main(String args[]) throws Exception {
-		new WriteSymptomDataFromFile().pullSymptoms();
+		new WriteSymptomDataToFile().pullSymptoms();
 	}
 
 	/**
@@ -16,7 +16,7 @@ public class AnalyticsCounter {
 	 *
 	 * @return the list sort
 	 */
-    public List<String> count () {
+    public static List<String> count () {
 		ReadSymptomDataFromFile read = new ReadSymptomDataFromFile("symptoms.txt");
 		ArrayList <String> symptoms = new ArrayList<>(read.getSymptoms()) ;
 		ArrayList <String> result = new ArrayList<>();
